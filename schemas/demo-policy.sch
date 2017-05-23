@@ -5,7 +5,7 @@ Schematron rules for policy-based  validation of PDF, based on output of VeraPDF
 The current set of rules represents the following policy:
    * No encryption / password protection
    * All fonts are embedded
-   * No JavaScript
+   * No JavaScript (TODO)
    * No embedded files (i.e. file attachments)
    * No multimedia content (audio, video, 3-D objects)
    * No PDFs that raise exception or result in processing error in VeraPDF (PDF validity proxy) 
