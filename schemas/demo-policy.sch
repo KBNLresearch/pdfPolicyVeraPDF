@@ -20,5 +20,15 @@ The current set of rules represents the following policy:
             <sch:assert test="not(@encrypted='1')">Encryption with open password is not allowed.</sch:assert>
         </sch:rule>
     </sch:pattern>
+    <sch:pattern name="Fonts must be embedded.">
+        <sch:rule context="/report/jobs/job/featuresReport/documentResources/fonts/font/fontDescriptor">
+            <sch:assert test="not(embedded = 'false')">Fonts that are not embedded are not allowed.</sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    <sch:pattern name="Document must be parsable (poor man's proxy for canonical PDF validation).">
+        <sch:rule context="/report/jobs/job/taskResult">
+            <sch:assert test="not(@type='PARSE' and @isSuccess='false')">Document must be parsable.</sch:assert>
+        </sch:rule>
+    </sch:pattern>
 </sch:schema>
 
