@@ -115,7 +115,7 @@ while IFS= read -d $'\0' -r file ; do
     outputSchematron=$rawDir/"$counter"_schematron.xml
     
     # Run VeraPDF
-    $veraPDF -x "$docName" > $outputVeraPDF 2>tmp.stderr
+    $veraPDF -x -o "$docName" > $outputVeraPDF 2>tmp.stderr
     
     # Validate output using Schematron reference application
     if [ $counter == "1" ]; then
