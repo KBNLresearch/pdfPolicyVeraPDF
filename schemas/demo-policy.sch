@@ -22,20 +22,20 @@ The current set of rules represents the following policy:
     </sch:pattern>
     <sch:pattern name="Fonts must be embedded.">
         <sch:rule context="/report/jobs/job/featuresReport/documentResources/fonts/font/fontDescriptor">
-            <sch:assert test="not(embedded = 'false')">Fonts that are not embedded are not allowed.</sch:assert>
+            <sch:assert test="not(embedded = 'false')">No fonts that are not embedded.</sch:assert>
         </sch:rule>
     </sch:pattern>
     <sch:pattern name="Multimedia not allowed.">
         <sch:rule context="/report/jobs/job/featuresReport/annotations/annotation">
-            <sch:assert test="not(subType='Screen')">Document must be parsable.</sch:assert>
+            <sch:assert test="not(subType='Screen')">No screen annotations.</sch:assert>
         </sch:rule>
     </sch:pattern>
     <sch:pattern name="File attachments and embeedded files not allowed.">
         <sch:rule context="/report/jobs/job/featuresReport/annotations/annotation">
-            <sch:assert test="not(subType='FileAttachment')">File attachments are not allowed.</sch:assert>
+            <sch:assert test="not(subType='FileAttachment')">No file attachments.</sch:assert>
         </sch:rule>
         <sch:rule context="/report/jobs/job/featuresReport/embeddedFiles">
-            <sch:assert test="not('embeddedFile')">Embedded files are not allowed.</sch:assert>
+            <sch:assert test="not('embeddedFile')">No embedded files.</sch:assert>
         </sch:rule>
     </sch:pattern>
     <sch:pattern name="Document must be parsable (poor man's proxy for canonical PDF validation).">
@@ -43,6 +43,5 @@ The current set of rules represents the following policy:
             <sch:assert test="not(@type='PARSE' and @isSuccess='false')">Document must be parsable.</sch:assert>
         </sch:rule>
     </sch:pattern>
-    
 </sch:schema>
 
