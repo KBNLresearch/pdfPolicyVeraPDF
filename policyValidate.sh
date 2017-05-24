@@ -159,7 +159,7 @@ while IFS= read -d $'\0' -r file ; do
     # Write success file (lists validation outcome for each PDF)
     echo \"$docName\",$success >> $successFile
     
-done < <(find $docRoot -name '*.pdf' -type f -print0)
+done < <(find $docRoot -iname '*.pdf' -type f -print0)
 
 # **************
 # CLEAN-UP

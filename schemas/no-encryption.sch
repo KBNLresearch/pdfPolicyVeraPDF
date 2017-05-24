@@ -11,8 +11,8 @@ The current set of rules represents the following policy:
         <sch:rule context="/report/jobs/job/featuresReport/documentSecurity">
             <sch:assert test="not(encryptMetadata = 'true')">Encrypt in trailer dictionary is not allowed.</sch:assert>
         </sch:rule>
-        <sch:rule context="/report/batchSummary">
-            <sch:assert test="not(@encrypted='1')">Encryption with open password is not allowed.</sch:assert>
+        <sch:rule context="/report/jobs/job/taskResult/exceptionMessage">
+            <sch:assert test="not(contains(.,'encrypted'))">Encryption with open password is not allowed.</sch:assert>
         </sch:rule>
     </sch:pattern>
 </sch:schema>
