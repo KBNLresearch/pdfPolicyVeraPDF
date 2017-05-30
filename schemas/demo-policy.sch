@@ -29,6 +29,9 @@ The current set of rules represents the following policy:
         <sch:rule context="/report/jobs/job/featuresReport/annotations/annotation">
             <sch:assert test="not(subType='Screen')">No screen annotations.</sch:assert>
         </sch:rule>
+        <sch:rule context="/report/jobs/job/featuresReport/annotations/annotation">
+            <sch:assert test="not(subType='Movie')">No movie annotations.</sch:assert>
+        </sch:rule>
     </sch:pattern>
     <sch:pattern name="File attachments and embedded files not allowed.">
         <sch:rule context="/report/jobs/job/featuresReport/annotations/annotation">
