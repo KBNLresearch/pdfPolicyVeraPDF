@@ -12,39 +12,48 @@ The current set of rules represents the following policy:
 -->
 
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt">
-    <sch:pattern name="Disallow encryption.">
+    <sch:pattern name="Disallow encryption">
         <sch:rule context="/report/jobs/job/featuresReport/documentSecurity">
-            <sch:assert test="not(encryptMetadata = 'true')">Encrypt in trailer dictionary is not allowed.</sch:assert>
+            <sch:assert test="not(encryptMetadata = 'true')">Encrypt in trailer dictionary</sch:assert>
         </sch:rule>
+    </sch:pattern>    
+    
+    <sch:pattern name="Disallow open password">
         <sch:rule context="/report/jobs/job/taskResult/exceptionMessage">
-            <sch:assert test="not(contains(.,'encrypted'))">Encryption with open password is not allowed.</sch:assert>
+            <sch:assert test="not(contains(.,'encrypted'))">Open password</sch:assert>
         </sch:rule>
     </sch:pattern>
-    <sch:pattern name="Fonts must be embedded.">
+    
+    <sch:pattern name="Fonts must be embedded">
         <sch:rule context="/report/jobs/job/featuresReport/documentResources/fonts/font/fontDescriptor">
-            <sch:assert test="not(embedded = 'false')">No fonts that are not embedded.</sch:assert>
+            <sch:assert test="not(embedded = 'false')">Font is not embedded</sch:assert>
         </sch:rule>
     </sch:pattern>
-    <sch:pattern name="Multimedia not allowed.">
+    
+    <sch:pattern name="Multimedia not allowed">
         <sch:rule context="/report/jobs/job/featuresReport/annotations/annotation">
-            <sch:assert test="not(subType='Screen')">No screen annotations.</sch:assert>
-        </sch:rule>
-        <sch:rule context="/report/jobs/job/featuresReport/annotations/annotation">
-            <sch:assert test="not(subType='Movie')">No movie annotations.</sch:assert>
+            <sch:assert test="not(subType='Screen')">Screen annotation</sch:assert>
+            <sch:assert test="not(subType='Movie')">Movie annotation</sch:assert>
         </sch:rule>
     </sch:pattern>
-    <sch:pattern name="File attachments and embedded files not allowed.">
+    
+    <sch:pattern name="File attachments not allowed">
         <sch:rule context="/report/jobs/job/featuresReport/annotations/annotation">
-            <sch:assert test="not(subType='FileAttachment')">No file attachments.</sch:assert>
+            <sch:assert test="not(subType='FileAttachment')">File attachment</sch:assert>
         </sch:rule>
+    </sch:pattern>
+    
+    <sch:pattern name="Embedded files not allowed">
         <sch:rule context="/report/jobs/job/featuresReport/embeddedFiles">
-            <sch:assert test="not('embeddedFile')">No embedded files.</sch:assert>
+            <sch:assert test="not('embeddedFile')">Embedded file</sch:assert>
         </sch:rule>
     </sch:pattern>
+    
     <sch:pattern name="Document must be parsable (poor man's proxy for canonical PDF validation).">
         <sch:rule context="/report/jobs/job/taskResult">
-            <sch:assert test="not(@type='PARSE' and @isSuccess='false')">Document must be parsable.</sch:assert>
+            <sch:assert test="not(@type='PARSE' and @isSuccess='false')">Document not parsable</sch:assert>
         </sch:rule>
     </sch:pattern>
+    
 </sch:schema>
 
