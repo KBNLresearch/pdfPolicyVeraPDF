@@ -3,13 +3,25 @@
 Schematron rules for policy-based  validation of PDF, based on output of VeraPDF.
    
 The current set of rules represents the following policy:
+
    * No encryption / password protection
    * All fonts are embedded
-   * No JavaScript (TODO)
    * No embedded files
    * No file attachments
    * No multimedia content (audio, video, 3-D objects)
-   * No PDFs that raise exception or result in processing error in VeraPDF (PDF validity proxy) 
+   * No PDFs that raise exception or result in processing error in VeraPDF (PDF validity proxy)
+
+The following aspects that are relevant for long-term accessibility are not included yet: 
+
+   * JavaScript actions
+   * Launch actions
+   * Stream objects that refer to an external file
+   * SpiderInfo dictionary (Web capture content!)
+   * Reference XObjects (refers to either external or embedded file) 
+   * Movie actions, Sound actions,Rendition actions, GoTo3DView actions (not enirely clear if these can occur
+     w/o respective annotations; seem tied to Link annotations which can be used for many things.)
+   * F (file specification) item in stream dictionary
+   
 -->
 
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt">
