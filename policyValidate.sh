@@ -64,7 +64,7 @@ summaryFile=$prefixOut"_summary.csv"
 # **************
 
 # Run VeraPDF
-$veraPDF -x --maxfailuresdisplayed 1 --policyfile $schema $pdfDir/*.pdf > $veraOut
+$veraPDF -x --maxfailuresdisplayed 1 --policyfile $schema $pdfDir/* > $veraOut
 
 # Run post-processing script
 python $extractScript $veraOut $veraCleaned $summaryFile

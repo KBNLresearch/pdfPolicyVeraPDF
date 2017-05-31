@@ -25,15 +25,15 @@ The following aspects that are relevant for long-term accessibility are not incl
 -->
 
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt">
-    <sch:pattern name="Disallow encryption">
+    <sch:pattern name="Disallow encrypt in trailer dictionary">
         <sch:rule context="/report/jobs/job/featuresReport/documentSecurity">
             <sch:assert test="not(encryptMetadata = 'true')">Encrypt in trailer dictionary</sch:assert>
         </sch:rule>
     </sch:pattern>    
     
-    <sch:pattern name="Disallow open password">
+    <sch:pattern name="Disallow other forms of encryption (e.g. open password)">
         <sch:rule context="/report/jobs/job/taskResult/exceptionMessage">
-            <sch:assert test="not(contains(.,'encrypted'))">Open password</sch:assert>
+            <sch:assert test="not(contains(.,'encrypted'))">Encrypted document</sch:assert>
         </sch:rule>
     </sch:pattern>
     

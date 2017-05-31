@@ -1,0 +1,113 @@
+<?xml version="1.0" ?>
+<report>
+    <jobs>
+        <job>
+            <item size="7209">
+                <name>/home/johan/pdfAcrobatEngineering/fonts/EmbeddedCmap.pdf</name>
+            </item>
+            <policyReport>
+                <failedChecks>
+                    <check location="/report/jobs/job[1]/featuresReport/documentResources/fonts/font[1]/fontDescriptor" status="failed" test="not(embedded = 'false')">
+                        <message>Font is not embedded</message>
+                    </check>
+                </failedChecks>
+            </policyReport>
+        </job>
+        <job>
+            <item size="135119">
+                <name>/home/johan/pdfAcrobatEngineering/fonts/embedded_fonts.pdf</name>
+            </item>
+            <policyReport>
+                <failedChecks>
+                    <check location="/report/jobs/job[2]/featuresReport/documentResources/fonts/font[1]/fontDescriptor" status="failed" test="not(embedded = 'false')">
+                        <message>Font is not embedded</message>
+                    </check>
+                </failedChecks>
+            </policyReport>
+        </job>
+        <job>
+            <item size="378507">
+                <name>/home/johan/pdfAcrobatEngineering/fonts/embedded_pm65.pdf</name>
+            </item>
+            <policyReport>
+                <failedChecks/>
+            </policyReport>
+        </job>
+        <job>
+            <item size="15071">
+                <name>/home/johan/pdfAcrobatEngineering/fonts/notembedded_pm65.pdf</name>
+            </item>
+            <policyReport>
+                <failedChecks>
+                    <check location="/report/jobs/job[4]/featuresReport/documentResources/fonts/font[1]/fontDescriptor" status="failed" test="not(embedded = 'false')">
+                        <message>Font is not embedded</message>
+                    </check>
+                </failedChecks>
+            </policyReport>
+        </job>
+        <job>
+            <item size="756731">
+                <name>/home/johan/pdfAcrobatEngineering/fonts/printtestfont_nonopt.pdf</name>
+            </item>
+            <policyReport>
+                <failedChecks/>
+            </policyReport>
+        </job>
+        <job>
+            <item size="756731">
+                <name>/home/johan/pdfAcrobatEngineering/fonts/printtestfont_opt.pdf</name>
+            </item>
+            <policyReport>
+                <failedChecks/>
+            </policyReport>
+        </job>
+        <job>
+            <item size="15448">
+                <name>/home/johan/pdfAcrobatEngineering/fonts/substitution_fonts.pdf</name>
+            </item>
+            <policyReport>
+                <failedChecks>
+                    <check location="/report/jobs/job[7]/featuresReport/documentResources/fonts/font[1]/fontDescriptor" status="failed" test="not(embedded = 'false')">
+                        <message>Font is not embedded</message>
+                    </check>
+                </failedChecks>
+            </policyReport>
+        </job>
+        <job>
+            <item size="654890">
+                <name>/home/johan/pdfAcrobatEngineering/fonts/text_images_pdf1.2.pdf</name>
+            </item>
+            <policyReport>
+                <failedChecks>
+                    <check location="/report/jobs/job[8]/featuresReport/documentResources/fonts/font[2]/fontDescriptor" status="failed" test="not(embedded = 'false')">
+                        <message>Font is not embedded</message>
+                    </check>
+                </failedChecks>
+            </policyReport>
+        </job>
+        <job>
+            <item size="1801037">
+                <name>/home/johan/pdfAcrobatEngineering/fonts/TEXT.pdf</name>
+            </item>
+            <policyReport>
+                <failedChecks>
+                    <check location="/report/jobs/job[9]/featuresReport/documentResources/fonts/font[1]/fontDescriptor" status="failed" test="not(embedded = 'false')">
+                        <message>Font is not embedded</message>
+                    </check>
+                </failedChecks>
+            </policyReport>
+        </job>
+        <job>
+            <item size="88263">
+                <name>/home/johan/pdfAcrobatEngineering/fonts/Type3_WWW-HTML.PDF</name>
+            </item>
+            <policyReport>
+                <failedChecks>
+                    <check location="/report/jobs/job[10]/featuresReport/documentResources/fonts/font[1]/fontDescriptor" status="failed" test="not(embedded = 'false')">
+                        <message>Font is not embedded</message>
+                    </check>
+                </failedChecks>
+            </policyReport>
+        </job>
+    </jobs>
+</report>

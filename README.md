@@ -20,6 +20,7 @@ Johan van der Knijff, KB/National Library of the Netherlands
 
 - **schemas**: example schemas (currently only one)
 
+- **examples**: example output files
 
 ## VeraPDF configuration
 
@@ -59,8 +60,11 @@ The script produces the following output files:
 - **suffixOut_san.xml**: sanitised version of VeraPDF output file. For each PDFit only contains the Policy Report, with duplicate instances of failed checks removed.
 - **suffixOut_summary.csv**:  comma-delimited file with for each PDF the file reference, followed by the description of each unique failed validation rule (taken from *message* element in VeraPDF output).
 
+See also the files in the [*examples*](./examples/) directory of this repo.
 
 ## Example
 
-`policyValidate.sh myPDFs demo-policy.sch whatever`
+The following command processes all files in the directory *~/acroEngineering/fonts*:
+
+`policyValidate.sh ~/acroEngineering/fonts demo-policy.sch fonts`
 

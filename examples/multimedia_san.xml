@@ -1,0 +1,313 @@
+<?xml version="1.0" ?>
+<report>
+    <jobs>
+        <job>
+            <item size="11923139">
+                <name>/home/johan/pdfAcrobatEngineering/multimedia/20020402_CALOS.pdf</name>
+            </item>
+            <policyReport>
+                <failedChecks>
+                    <check location="/report/jobs/job[1]/featuresReport/documentResources/fonts/font[5]/fontDescriptor" status="failed" test="not(embedded = 'false')">
+                        <message>Font is not embedded</message>
+                    </check>
+                    <check location="/report/jobs/job[1]/featuresReport/annotations/annotation[10]" status="failed" test="not(subType='Movie')">
+                        <message>Movie annotation</message>
+                    </check>
+                </failedChecks>
+            </policyReport>
+        </job>
+        <job>
+            <item size="8676809">
+                <name>/home/johan/pdfAcrobatEngineering/multimedia/3-D_PDF.pdf</name>
+            </item>
+            <policyReport>
+                <failedChecks>
+                    <check location="/report/jobs/job[2]/featuresReport/annotations/annotation" status="failed" test="not(subType='3D')">
+                        <message>3D annotation</message>
+                    </check>
+                </failedChecks>
+            </policyReport>
+        </job>
+        <job>
+            <item size="8621826">
+                <name>/home/johan/pdfAcrobatEngineering/multimedia/AdobeChassisDemo-commented.pdf</name>
+            </item>
+            <policyReport>
+                <failedChecks>
+                    <check location="/report/jobs/job[3]/featuresReport/annotations/annotation[1]" status="failed" test="not(subType='3D')">
+                        <message>3D annotation</message>
+                    </check>
+                </failedChecks>
+            </policyReport>
+        </job>
+        <job>
+            <item size="8652944">
+                <name>/home/johan/pdfAcrobatEngineering/multimedia/AdobeChassisDemo-commented_Review.pdf</name>
+            </item>
+            <policyReport>
+                <failedChecks>
+                    <check location="/report/jobs/job[4]/featuresReport/annotations/annotation[1]" status="failed" test="not(subType='3D')">
+                        <message>3D annotation</message>
+                    </check>
+                </failedChecks>
+            </policyReport>
+        </job>
+        <job>
+            <item size="1245">
+                <name>/home/johan/pdfAcrobatEngineering/multimedia/AVI+Transitions Demo.pdf</name>
+            </item>
+            <policyReport>
+                <failedChecks>
+                    <check location="/report/jobs/job[5]/taskResult" status="failed" test="not(@type='PARSE' and @isSuccess='false')">
+                        <message>Document not parsable</message>
+                    </check>
+                </failedChecks>
+            </policyReport>
+        </job>
+        <job>
+            <item size="9372926">
+                <name>/home/johan/pdfAcrobatEngineering/multimedia/Binder_6-3DPages.pdf</name>
+            </item>
+            <policyReport>
+                <failedChecks>
+                    <check location="/report/jobs/job[6]/featuresReport/annotations/annotation[1]" status="failed" test="not(subType='3D')">
+                        <message>3D annotation</message>
+                    </check>
+                </failedChecks>
+            </policyReport>
+        </job>
+        <job>
+            <item size="153355">
+                <name>/home/johan/pdfAcrobatEngineering/multimedia/Disney-Flash.pdf</name>
+            </item>
+            <policyReport>
+                <failedChecks>
+                    <check location="/report/jobs/job[7]/featuresReport/documentResources/fonts/font[1]/fontDescriptor" status="failed" test="not(embedded = 'false')">
+                        <message>Font is not embedded</message>
+                    </check>
+                    <check location="/report/jobs/job[7]/featuresReport/annotations/annotation[1]" status="failed" test="not(subType='Screen')">
+                        <message>Screen annotation</message>
+                    </check>
+                </failedChecks>
+            </policyReport>
+        </job>
+        <job>
+            <item size="1000426">
+                <name>/home/johan/pdfAcrobatEngineering/multimedia/drape_raster_contour_sample.pdf</name>
+            </item>
+            <policyReport>
+                <failedChecks>
+                    <check location="/report/jobs/job[8]/featuresReport/documentResources/fonts/font[1]/fontDescriptor" status="failed" test="not(embedded = 'false')">
+                        <message>Font is not embedded</message>
+                    </check>
+                    <check location="/report/jobs/job[8]/featuresReport/annotations/annotation[1]" status="failed" test="not(subType='3D')">
+                        <message>3D annotation</message>
+                    </check>
+                </failedChecks>
+            </policyReport>
+        </job>
+        <job>
+            <item size="673524">
+                <name>/home/johan/pdfAcrobatEngineering/multimedia/gXsummer2004-stream.pdf</name>
+            </item>
+            <policyReport>
+                <failedChecks>
+                    <check location="/report/jobs/job[9]/taskResult" status="failed" test="not(@type='PARSE' and @isSuccess='false')">
+                        <message>Document not parsable</message>
+                    </check>
+                </failedChecks>
+            </policyReport>
+        </job>
+        <job>
+            <item size="34913">
+                <name>/home/johan/pdfAcrobatEngineering/multimedia/Jpeg_linked.pdf</name>
+            </item>
+            <policyReport>
+                <failedChecks>
+                    <check location="/report/jobs/job[10]/taskResult/exceptionMessage" status="failed" test="not(contains(.,'encrypted'))">
+                        <message>Encrypted document</message>
+                    </check>
+                    <check location="/report/jobs/job[10]/taskResult" status="failed" test="not(@type='PARSE' and @isSuccess='false')">
+                        <message>Document not parsable</message>
+                    </check>
+                </failedChecks>
+            </policyReport>
+        </job>
+        <job>
+            <item size="259601">
+                <name>/home/johan/pdfAcrobatEngineering/multimedia/LabelExample.pdf</name>
+            </item>
+            <policyReport>
+                <failedChecks>
+                    <check location="/report/jobs/job[11]/taskResult/exceptionMessage" status="failed" test="not(contains(.,'encrypted'))">
+                        <message>Encrypted document</message>
+                    </check>
+                    <check location="/report/jobs/job[11]/taskResult" status="failed" test="not(@type='PARSE' and @isSuccess='false')">
+                        <message>Document not parsable</message>
+                    </check>
+                </failedChecks>
+            </policyReport>
+        </job>
+        <job>
+            <item size="62006">
+                <name>/home/johan/pdfAcrobatEngineering/multimedia/movie_down1.pdf</name>
+            </item>
+            <policyReport>
+                <failedChecks>
+                    <check location="/report/jobs/job[12]/featuresReport/annotations/annotation[1]" status="failed" test="not(subType='Movie')">
+                        <message>Movie annotation</message>
+                    </check>
+                </failedChecks>
+            </policyReport>
+        </job>
+        <job>
+            <item size="63746">
+                <name>/home/johan/pdfAcrobatEngineering/multimedia/movie.pdf</name>
+            </item>
+            <policyReport>
+                <failedChecks>
+                    <check location="/report/jobs/job[13]/featuresReport/annotations/annotation[1]" status="failed" test="not(subType='Movie')">
+                        <message>Movie annotation</message>
+                    </check>
+                </failedChecks>
+            </policyReport>
+        </job>
+        <job>
+            <item size="98440">
+                <name>/home/johan/pdfAcrobatEngineering/multimedia/MultiMedia_Acro6.pdf</name>
+            </item>
+            <policyReport>
+                <failedChecks>
+                    <check location="/report/jobs/job[14]/taskResult/exceptionMessage" status="failed" test="not(contains(.,'encrypted'))">
+                        <message>Encrypted document</message>
+                    </check>
+                    <check location="/report/jobs/job[14]/taskResult" status="failed" test="not(@type='PARSE' and @isSuccess='false')">
+                        <message>Document not parsable</message>
+                    </check>
+                </failedChecks>
+            </policyReport>
+        </job>
+        <job>
+            <item size="89002">
+                <name>/home/johan/pdfAcrobatEngineering/multimedia/MusicalScore.pdf</name>
+            </item>
+            <policyReport>
+                <failedChecks>
+                    <check location="/report/jobs/job[15]/featuresReport/documentResources/fonts/font[1]/fontDescriptor" status="failed" test="not(embedded = 'false')">
+                        <message>Font is not embedded</message>
+                    </check>
+                    <check location="/report/jobs/job[15]/featuresReport/annotations/annotation[1]" status="failed" test="not(subType='Screen')">
+                        <message>Screen annotation</message>
+                    </check>
+                </failedChecks>
+            </policyReport>
+        </job>
+        <job>
+            <item size="192990">
+                <name>/home/johan/pdfAcrobatEngineering/multimedia/phlmapbeta7.pdf</name>
+            </item>
+            <policyReport>
+                <failedChecks>
+                    <check location="/report/jobs/job[16]/featuresReport/documentResources/fonts/font[1]/fontDescriptor" status="failed" test="not(embedded = 'false')">
+                        <message>Font is not embedded</message>
+                    </check>
+                    <check location="/report/jobs/job[16]/featuresReport/annotations/annotation[1]" status="failed" test="not(subType='Screen')">
+                        <message>Screen annotation</message>
+                    </check>
+                </failedChecks>
+            </policyReport>
+        </job>
+        <job>
+            <item size="21055">
+                <name>/home/johan/pdfAcrobatEngineering/multimedia/remotemovieurl.pdf</name>
+            </item>
+            <policyReport>
+                <failedChecks>
+                    <check location="/report/jobs/job[17]/featuresReport/documentResources/fonts/font[1]/fontDescriptor" status="failed" test="not(embedded = 'false')">
+                        <message>Font is not embedded</message>
+                    </check>
+                    <check location="/report/jobs/job[17]/featuresReport/annotations/annotation[1]" status="failed" test="not(subType='Movie')">
+                        <message>Movie annotation</message>
+                    </check>
+                </failedChecks>
+            </policyReport>
+        </job>
+        <job>
+            <item size="3420030">
+                <name>/home/johan/pdfAcrobatEngineering/multimedia/ScriptEvents.pdf</name>
+            </item>
+            <policyReport>
+                <failedChecks>
+                    <check location="/report/jobs/job[18]/featuresReport/documentResources/fonts/font[1]/fontDescriptor" status="failed" test="not(embedded = 'false')">
+                        <message>Font is not embedded</message>
+                    </check>
+                    <check location="/report/jobs/job[18]/featuresReport/annotations/annotation[3]" status="failed" test="not(subType='Screen')">
+                        <message>Screen annotation</message>
+                    </check>
+                </failedChecks>
+            </policyReport>
+        </job>
+        <job>
+            <item size="38008">
+                <name>/home/johan/pdfAcrobatEngineering/multimedia/Service Form_media.pdf</name>
+            </item>
+            <policyReport>
+                <failedChecks>
+                    <check location="/report/jobs/job[19]/featuresReport/documentResources/fonts/font[1]/fontDescriptor" status="failed" test="not(embedded = 'false')">
+                        <message>Font is not embedded</message>
+                    </check>
+                    <check location="/report/jobs/job[19]/featuresReport/annotations/annotation[16]" status="failed" test="not(subType='Screen')">
+                        <message>Screen annotation</message>
+                    </check>
+                </failedChecks>
+            </policyReport>
+        </job>
+        <job>
+            <item size="53017">
+                <name>/home/johan/pdfAcrobatEngineering/multimedia/SVG-AnnotAnim.pdf</name>
+            </item>
+            <policyReport>
+                <failedChecks>
+                    <check location="/report/jobs/job[20]/featuresReport/documentResources/fonts/font/fontDescriptor" status="failed" test="not(embedded = 'false')">
+                        <message>Font is not embedded</message>
+                    </check>
+                </failedChecks>
+            </policyReport>
+        </job>
+        <job>
+            <item size="4603158">
+                <name>/home/johan/pdfAcrobatEngineering/multimedia/SVG.pdf</name>
+            </item>
+            <policyReport>
+                <failedChecks>
+                    <check location="/report/jobs/job[21]/featuresReport/documentResources/fonts/font/fontDescriptor" status="failed" test="not(embedded = 'false')">
+                        <message>Font is not embedded</message>
+                    </check>
+                </failedChecks>
+            </policyReport>
+        </job>
+        <job>
+            <item size="2956103">
+                <name>/home/johan/pdfAcrobatEngineering/multimedia/Trophy.pdf</name>
+            </item>
+            <policyReport>
+                <failedChecks>
+                    <check location="/report/jobs/job[22]/featuresReport/documentResources/fonts/font[1]/fontDescriptor" status="failed" test="not(embedded = 'false')">
+                        <message>Font is not embedded</message>
+                    </check>
+                    <check location="/report/jobs/job[22]/featuresReport/annotations/annotation[7]" status="failed" test="not(subType='Screen')">
+                        <message>Screen annotation</message>
+                    </check>
+                </failedChecks>
+            </policyReport>
+        </job>
+        <job>
+            <item size="123367">
+                <name>/home/johan/pdfAcrobatEngineering/multimedia/us_population.pdf</name>
+            </item>
+            <policyReport>
+                <failedChecks/>
+            </policyReport>
+        </job>
+    </jobs>
+</report>
