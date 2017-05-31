@@ -125,6 +125,10 @@ Command-line for *multimedia* files:
 `Exception: The PDF stream appears to be encrypted. caused by exception: Reader::init(...)encrypted pdf is not supported`
 
 
+## Links
 
+* This repo
+* Report PDF Preservation risks (Zenodo?)
+* VeraPDF
 
  
