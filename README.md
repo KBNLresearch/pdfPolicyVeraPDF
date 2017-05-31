@@ -41,7 +41,7 @@ The policy-based validation uses the VeraPDF feature-extraction switch. In order
 
 #### Usage
 
-    policyValidate.sh pdfDir policy
+    policyValidate.sh pdfDir policy suffixOut
 
 #### Positional arguments
 
@@ -49,19 +49,18 @@ The policy-based validation uses the VeraPDF feature-extraction switch. In order
 
 `policy` : schematron file that defines the policy (see example in the *schemas* directory)
 
+`suffixOut` : suffix that is used as base name for output files
+
 ## Output
 
 The script produces the following output files:
 
-- **index.csv**: comma-delimited text file with for each analysed PDF the paths to the corresponding VeraPDF and Schematron output files
-- **success.csv**: comma-delimited text file with for each analysed PDF the outcome of the policy-based validation (pass/fail)
-- **failed.csv**:  text file with all tests that failed for PDFs that failed the policy-based validation
+- **suffixOut_out.xml**: output file of VeraPDF
+- **suffixOut_san.xml**: sanitised version of VeraPDF output file. For each PDFit only contains the Policy Report, with duplicate instances of failed checks removed.
+- **suffixOut_summary.csv**:  comma-delimited file with for each PDF the file reference, followed by the description of each unique failed validation rule (taken from *message* element in VeraPDF output).
 
-In addition, the raw output files of *VeraPDF* and the Schematron validation are written to directory *outRaw*. You should use *index.csv* to link each of these files to their corresponding PDF. 
 
 ## Example
 
-`policyValidate.sh myPDFs demo-policy.sch`
+`policyValidate.sh myPDFs demo-policy.sch whatever`
 
-
- 

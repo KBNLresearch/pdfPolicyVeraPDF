@@ -26,8 +26,8 @@ extractScript=$instDir/postprocessing.py
 # **************
 
 # Check command line args
-if [ "$#" -ne 2 ] ; then
-  echo "Usage: policyValidate.sh pdfDir policy" >&2
+if [ "$#" -ne 3 ] ; then
+  echo "Usage: policyValidate.sh pdfDir policy prefixOut" >&2
   exit 1
 fi
 
@@ -47,32 +47,17 @@ pdfDir="$1"
 # Schema
 schema="$2"
 
+# Output file prefix
+prefixOut="$3"
+
 # **************
 # OUTPUT FILES
 # **************
 
-veraOut=veraOut.xml
-veraCleaned=veraCleaned.xml
-
-# File with results (pass/fail) of policy-based validation for each PDF
-successFile="success.csv"
-
+veraOut=$prefixOut"_out.xml"
+veraCleaned=$prefixOut"_san.xml"
 # File that summarises failed tests for PDFs that didn't pass policy-based validation
-failedTestsFile="failed.csv" 
-
-# Remove these files if they exist already (writing to them will be done in append mode!)
-
-if [ -f $indexFile ] ; then
-    rm $indexFile
-fi
-
-if [ -f $successFile ] ; then
-    rm $successFile
-fi
-
-if [ -f $failedTestsFile ] ; then
-    rm $failedTestsFile
-fi
+summaryFile=$prefixOut"_summary.csv"
 
 # **************
 # PROCESSING
@@ -82,5 +67,5 @@ fi
 $veraPDF -x --maxfailuresdisplayed 1 --policyfile $schema $pdfDir/*.pdf > $veraOut
 
 # Run post-processing script
-python $extractScript $veraOut > $veraCleaned
+python $extractScript $veraOut $veraCleaned $summaryFile
 
