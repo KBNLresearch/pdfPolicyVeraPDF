@@ -6,7 +6,8 @@ The current set of rules represents the following policy:
    * No encryption / password protection
    * All fonts are embedded
    * No JavaScript (TODO)
-   * No embedded files (i.e. file attachments)
+   * No embedded files
+   * No file attachments
    * No multimedia content (audio, video, 3-D objects)
    * No PDFs that raise exception or result in processing error in VeraPDF (PDF validity proxy) 
 -->
@@ -34,6 +35,8 @@ The current set of rules represents the following policy:
         <sch:rule context="/report/jobs/job/featuresReport/annotations/annotation">
             <sch:assert test="not(subType='Screen')">Screen annotation</sch:assert>
             <sch:assert test="not(subType='Movie')">Movie annotation</sch:assert>
+            <sch:assert test="not(subType='Sound')">Sound annotation</sch:assert>
+            <sch:assert test="not(subType='3D')">3D annotation</sch:assert>
         </sch:rule>
     </sch:pattern>
     
