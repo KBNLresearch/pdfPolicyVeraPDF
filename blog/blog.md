@@ -4,8 +4,6 @@ Some four years ago I wrote [a blog post](http://openpreservation.org/blog/2013/
 
 The idea of using a *PDF/A* validor for policy-based assessments of "regular" *PDF* files (i.e. *PDF*s that are not necessarily *PDF/A*) was explicitly addressed as a use case for [*veraPDF*](http://verapdf.org/). With *VeraPDF* now having entered its "final testing phase", I thought this was a good time for a small test-drive of *veraPDF*'s capabilities in this area. All test results are based on *VeraPDF* 1.4.7.
 
-<!--
-
 ## Test data
   
 For this test I used *PDF*s from the [*Adobe Acrobat Engineering* website](https://web.archive.org/web/20130503115947/http://acroeng.adobe.com/wp/) (sadly gone since 2015). As in my 2013 blog post, I limited the analysis to:
